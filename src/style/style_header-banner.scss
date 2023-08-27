@@ -1,0 +1,71 @@
+// Restart file
+@import 'style_res.scss';
+
+//Variable file
+@import 'style_var.scss';
+
+//Extend file
+@import 'style_ext.scss';
+
+//Mixin file
+@import 'style_mix.scss';
+
+//Styles of Banner block
+.banner{
+    &__container{
+        @extend %container-size;
+        @extend %flex-block;
+        flex-direction: column;
+    }
+    background-image: url(/src/media/header/bg.png);
+    background-size: cover;
+    @include padding-block($pb:120px);
+    &__title{
+        @include titles;
+        margin-bottom: 31px;
+    }
+    &__subtitle{
+        @include titles($size:24px, $weight:400, $transform:none);
+        margin-bottom: 80px;
+    }
+    &__button{
+        @include download-button;
+    }
+}
+
+.header{
+
+    &__container{
+        @extend %container-size;
+        @extend %flex-block;
+        justify-content: space-between;
+        border-bottom: 1px solid $borderBottomColor;
+        margin-bottom: 130px;
+    }
+    &__menu{
+
+    }
+    &__items{
+        @extend %flex-block;
+    }
+    &__item{
+        @extend %flex-block;
+        padding: 35px 15px;
+        min-width: 134px;
+        
+        
+        &-active{
+            border-bottom: 3px solid $borderBottomColor;
+        }
+    }
+    &__link{
+        @extend %link-settings;
+    }
+}
+
+.logo__link{
+    @extend %flex-block;
+    &__img{
+
+    }
+}
