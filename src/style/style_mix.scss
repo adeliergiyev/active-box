@@ -1,0 +1,29 @@
+@mixin padding-block($pt:0px, $pr:0px, $pb:0px, $pl:0px) {
+    padding: $pt $pr $pb $pl;
+}
+
+@mixin titles($color:#FFF, $family:Raleway, $size:64px, $weight:900, $transform:uppercase){
+    text-align: center;
+    color: $color;
+    font-family: $family;
+    font-size: $size;
+    font-style: normal;
+    font-weight: $weight;
+    line-height: normal;
+    text-transform: $transform;
+}
+
+@mixin download-button($bg-color:$colorButton,){
+    background-color: $bg-color;
+    min-width: 370px;
+    color: #FFF;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 28px;
+    text-transform: uppercase;
+    padding: 26px;
+    border: none;
+}

@@ -1,0 +1,23 @@
+%container-size{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+%flex-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%link-settings{
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: Raleway;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+}
