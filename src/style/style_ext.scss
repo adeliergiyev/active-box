@@ -20,12 +20,15 @@
     font-style: normal;
     font-weight: 700;
     line-height: 28px;
+    padding: 33px 0;
+    width: 100%;
+    text-align: center;
 }
 
 %block-cover{
     content: "";
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     background: #252B49;
     opacity: 0.8;
     width: 100%;
