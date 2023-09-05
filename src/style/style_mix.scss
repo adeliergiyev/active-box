@@ -13,9 +13,10 @@
     text-transform: $transform;
 }
 
-@mixin download-button($bg-color:$colorButton,$mWidthButton:370px, $fontSizeButton:24px, $paddingButton:26px){
+@mixin download-button($bg-color:$mainColorButton,$maxWidthButton:370px, $fontSizeButton:24px, $paddingButton:26px){
     background-color: $bg-color;
-    min-width: $mWidthButton;
+    max-width: $maxWidthButton;
+    width: 100%;
     color: #FFF;
     text-align: center;
     font-family: Raleway;
