@@ -15,9 +15,9 @@
 .header{
     position: fixed;
     z-index: 2;
-    width: 100%;
     top: 0;
     left: 0;
+    width: 100%;
     &__container{
         @extend %container-size;
         @extend %flex-block;
@@ -38,10 +38,13 @@
             border-bottom: 3px solid $borderBottomColor;
         }
         &:active{
-            color: #E71414;
-            border-bottom: 3px solid #E71414;
+            color: $secondryTextColor;
+            border-bottom: 3px solid $secondryTextColor;
         }
     }
+}
+.logo__link{
+    @extend %flex-block;
 }
 .banner{
     background-image: url(/src/media/header/bg.png);
@@ -74,14 +77,11 @@
         @include download-button;
         &:hover{
             cursor: pointer;
-            background-color: #E71414;
+            background-color: $hoverColorButton;
         }
         &:active{
-            background-color: #FF4343;
-            box-shadow: 4px 4px 30px 0px #FF4343;
+            background-color: $activeColorButton;
+            box-shadow: 4px 4px 30px 0px $activeColorButton;
         }
     }
-}
-.logo__link{
-    @extend %flex-block;
 }

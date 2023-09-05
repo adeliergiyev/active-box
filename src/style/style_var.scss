@@ -1,3 +1,12 @@
-//Variables of current block:
-$colorButton: rgba(255, 67, 67, 1);
+//Variables for buttons:
+$mainColorButton: rgba(255, 67, 67, 1);
+$hoverColorButton: #E71414;
+$activeColorButton: #FF4343;
+
+//Variables for blocks(containers, wraps): 
 $borderBottomColor: #BABBC5;
+
+//Variables for texts, links, titles:
+$primaryTextColor: #fff;
+$secondryTextColor: #E71414;
+
