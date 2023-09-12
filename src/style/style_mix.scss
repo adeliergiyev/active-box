@@ -13,7 +13,7 @@
     text-transform: $transform;
 }
 
-@mixin download-button($bg-color:$mainColorButton,$maxWidthButton:370px, $fontSizeButton:24px, $paddingButton:26px){
+@mixin download-button($bg-color:$mainColorButton,$maxWidthButton:370px, $fontSizeButton:24px, $paddingButton:26px, $transType:linear){
     background-color: $bg-color;
     max-width: $maxWidthButton;
     width: 100%;
@@ -27,4 +27,14 @@
     text-transform: uppercase;
     padding: $paddingButton;
     border: none;
+    transition: .25s $transType;
+}
+
+@mixin grid-block($columnGridWidth:1fr, $columnGridGap:31px, $rowGridGap:88px, $columnGridCount:3) {
+    display: grid;
+    grid-template-columns: repeat($columnGridCount, $columnGridWidth);
+    column-gap: $columnGridGap;
+    row-gap: $rowGridGap;
+    // justify-content: center;
+    // align-items: center;
 }

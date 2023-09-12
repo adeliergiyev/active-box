@@ -10,7 +10,7 @@
 //Mixin file
 @import 'style_mix.scss';
 
-//Styles of Banner block
+//Styles of "Header" block
 
 .header{
     position: fixed;
@@ -34,6 +34,7 @@
     &__link{
         @extend %link-settings;
         border-bottom: 3px solid transparent;
+        transition: .25s linear;
         &:hover{
             border-bottom: 3px solid $borderBottomColor;
         }
@@ -46,6 +47,8 @@
 .logo__link{
     @extend %flex-block;
 }
+
+//Styles of "Banner" block
 .banner{
     background-image: url(/src/media/header/bg.png);
     background-size:cover;
