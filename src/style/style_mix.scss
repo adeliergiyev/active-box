@@ -2,18 +2,27 @@
     padding: $pt $pr $pb $pl;
 }
 
-@mixin titles($color:#FFF, $family:Raleway, $size:64px, $weight:900, $transform:uppercase){
+@mixin titles($color:$primaryTextColor, $family:Raleway, $size:64px, $weight:900, $lHeight:normal, $transform:uppercase){
     text-align: center;
     color: $color;
     font-family: $family;
     font-size: $size;
     font-style: normal;
     font-weight: $weight;
-    line-height: normal;
+    line-height: $lHeight;
     text-transform: $transform;
 }
 
-@mixin download-button($bg-color:$mainColorButton,$maxWidthButton:370px, $fontSizeButton:24px, $paddingButton:26px, $transType:linear){
+@mixin texts($color:#000, $family:Raleway, $size:18px, $weight:400, $lHeight:normal){
+    color: $color;
+    font-family: $family;
+    font-size: $size;
+    font-style: normal;
+    font-weight: $weight;
+    line-height: $lHeight;
+}
+
+@mixin download-button($bg-color:$mainColorButton,$maxWidthButton:370px, $fontSizeButton:24px, $pb:26px, $transType:linear){
     background-color: $bg-color;
     max-width: $maxWidthButton;
     width: 100%;
@@ -25,16 +34,14 @@
     font-weight: 900;
     line-height: 28px;
     text-transform: uppercase;
-    padding: $paddingButton;
+    padding: $pb;
     border: none;
     transition: .25s $transType;
 }
 
-@mixin grid-block($columnGridWidth:1fr, $columnGridGap:31px, $rowGridGap:88px, $columnGridCount:3) {
+@mixin grid-block($columnGridWidth:1fr, $columnGridGap:0px, $rowGridGap:0px, $columnGridCount:3) {
     display: grid;
     grid-template-columns: repeat($columnGridCount, $columnGridWidth);
     column-gap: $columnGridGap;
     row-gap: $rowGridGap;
-    // justify-content: center;
-    // align-items: center;
 }

@@ -1,0 +1,58 @@
+//Variable file
+@import 'style_var.scss';
+
+//Extend file
+@import 'style_ext.scss';
+
+//Mixin file
+@import 'style_mix.scss';
+
+//Styles of "Projects" block
+.projects {
+    &__container {
+        @include grid-block($columnGridCount: 4);
+    }
+
+    &__item {
+        cursor: pointer;
+        position: relative;
+        border: 1px solid #fff;
+    }
+    &__item:hover &__cover{
+        z-index: 3;
+    }
+    &__item::after {
+        content: '';
+        display: block;
+        padding-top: 100%;
+    }
+    &__img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+    }
+
+    &__cover {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-color: #FF4343CC;
+        @extend %flex-block;
+        flex-direction: column;
+        row-gap: 21px;
+        transition: all .25s $transType;
+    }
+    &__title {
+        @include titles($size:24px, $lHeight:59px, $transform:uppercase);
+    }
+
+    &__subtitle {
+        @include titles($size:18px, $weight:400, $lHeight:20px, $transform:capitalize);
+    }
+}

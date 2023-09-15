@@ -1,0 +1,32 @@
+//Variable file
+@import 'style_var.scss';
+
+//Extend file
+@import 'style_ext.scss';
+
+//Mixin file
+@import 'style_mix.scss';
+
+//Styles of "Features" block
+.features{
+    @include padding-block($pt:116px, $pb:116px);
+    &__container{
+        @extend %container-size;
+        @include grid-block($columnGridGap:31px, $rowGridGap:88px);
+    }
+    &__item{
+        @extend %flex-block;
+        flex-direction: column;
+    }
+    &__icon{
+        margin-bottom: 29px;
+    }
+    &__title{
+        @include titles($color:#2D3033, $size:24px, $lHeight:72px);
+        margin-bottom: 21px;
+    }
+    &__text{
+        @include texts($color:#6C7279, $lHeight:21px);
+        text-align: center;
+    }
+}

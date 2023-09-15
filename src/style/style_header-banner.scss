@@ -1,6 +1,3 @@
-// Restart file
-@import 'style_res.scss';
-
 //Variable file
 @import 'style_var.scss';
 
@@ -11,7 +8,6 @@
 @import 'style_mix.scss';
 
 //Styles of "Header" block
-
 .header{
     position: fixed;
     z-index: 2;
@@ -34,7 +30,7 @@
     &__link{
         @extend %link-settings;
         border-bottom: 3px solid transparent;
-        transition: .25s linear;
+        transition: .25s $transType;
         &:hover{
             border-bottom: 3px solid $borderBottomColor;
         }
@@ -43,9 +39,9 @@
             border-bottom: 3px solid $secondryTextColor;
         }
     }
-}
-.logo__link{
-    @extend %flex-block;
+    .logo__link{
+        @extend %flex-block;
+    }
 }
 
 //Styles of "Banner" block
