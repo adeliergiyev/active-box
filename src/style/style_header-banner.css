@@ -43,6 +43,8 @@
   top: 0;
   left: 0;
   width: 100%;
+  opacity: 0.8;
+  background-color: #252B49;
 }
 .header__container {
   justify-content: space-between;
@@ -79,7 +81,7 @@
 }
 .banner__title {
   text-align: center;
-  color: #FFF;
+  color: #fff;
   font-family: Raleway;
   font-size: 64px;
   font-style: normal;
@@ -90,7 +92,7 @@
 }
 .banner__subtitle {
   text-align: center;
-  color: #FFF;
+  color: #fff;
   font-family: Raleway;
   font-size: 24px;
   font-style: normal;

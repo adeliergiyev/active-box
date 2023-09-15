@@ -14,6 +14,8 @@
     top: 0;
     left: 0;
     width: 100%;
+    opacity: 0.8;
+    background-color: #252B49;
     &__container{
         @extend %container-size;
         @extend %flex-block;
@@ -30,7 +32,7 @@
     &__link{
         @extend %link-settings;
         border-bottom: 3px solid transparent;
-        transition: .25s $transType;
+        transition: .25s linear;
         &:hover{
             border-bottom: 3px solid $borderBottomColor;
         }
