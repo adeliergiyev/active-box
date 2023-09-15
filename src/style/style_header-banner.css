@@ -1,18 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Raleway", sans-serif;
-  border: 1px solid #df0a0a;
-  box-sizing: border-box;
-}
-
 .banner__container, .header__container {
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
-.banner__container, .logo__link, .header__item, .header__items, .header__container {
+.banner__container, .header .logo__link, .header__item, .header__items, .header__container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,7 +62,6 @@
   color: #E71414;
   border-bottom: 3px solid #E71414;
 }
-
 .banner {
   background-image: url(/src/media/header/bg.png);
   background-size: cover;
