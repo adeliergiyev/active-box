@@ -1,0 +1,59 @@
+//Variable file
+@import 'style_var.scss';
+
+//Extend file
+@import 'style_ext.scss';
+
+//Mixin file
+@import 'style_mix.scss';
+
+//Styles of "Projects" block
+.team {
+    @include padding-block($pt:106px, $pb:114px);
+    &__container{
+        @extend %container-size;
+        @include grid-block($columnGridWidth:1fr, $columnGridCount:4, $columnGridGap:30px);
+    }
+    &__article{
+        @extend %flex-block;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__picture{
+
+    }
+    &__title{
+        @include titles($t-align:left, $color:$thirtyTextColor, $size:24px, $weight:700, $lHeight:30px, $transform:capitalize);
+    }
+    &__position{
+        @include titles($t-align:left, $color:$fourthTextColor, $size:18px, $weight:400, $lHeight:21px, $transform:uppercase);
+    }
+    &__description{
+        @include texts($color:$fifthTextColor, $lHeight:21px)
+    }
+    &__sm-wrap{
+        @extend %flex-block;
+        justify-content: flex-start;
+        column-gap: 6px;
+        margin: auto 0 0 0;
+        width: 100%;
+    }
+    &__sm-link{
+        display: block;
+        max-width: 39px;
+        max-height: 39px;
+        &:hover path, rect{
+            cursor: pointer;
+            fill: $hoverColorButton;
+            stroke: $hoverColorButton;
+        }
+        &:active path{
+            fill: $activeColorButton;
+            stroke: $activeColorButton;
+        }
+    }
+    &__sm-icon{
+        width: 100%;
+        height: 100%;
+    }
+}
