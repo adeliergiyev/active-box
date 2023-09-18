@@ -2,8 +2,8 @@
     padding: $pt $pr $pb $pl;
 }
 
-@mixin titles($color:$primaryTextColor, $family:Raleway, $size:64px, $weight:900, $lHeight:normal, $transform:uppercase){
-    text-align: center;
+@mixin titles($t-align:center, $color:$primaryTextColor, $family:Raleway, $size:64px, $weight:900, $lHeight:normal, $transform:uppercase){
+    text-align: $t-align;
     color: $color;
     font-family: $family;
     font-size: $size;
