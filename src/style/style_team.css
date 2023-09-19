@@ -10,6 +10,10 @@
   align-items: center;
 }
 
+.team__sm-link path, .team__sm-link {
+  transition: all 0.25s linear;
+}
+
 .team {
   padding: 106px 0px 114px 0px;
 }
@@ -24,6 +28,9 @@
   flex-direction: column;
   align-items: flex-start;
 }
+.team__picture {
+  margin-bottom: 30px;
+}
 .team__title {
   text-align: left;
   color: #000;
@@ -33,6 +40,7 @@
   font-weight: 700;
   line-height: 30px;
   text-transform: capitalize;
+  margin-bottom: 5px;
 }
 .team__position {
   text-align: left;
@@ -43,6 +51,7 @@
   font-weight: 400;
   line-height: 21px;
   text-transform: uppercase;
+  margin-bottom: 18px;
 }
 .team__description {
   color: #6C7279;
@@ -51,6 +60,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
+  margin-bottom: 38px;
 }
 .team__sm-wrap {
   justify-content: flex-start;
@@ -61,19 +71,26 @@
 }
 .team__sm-link {
   display: block;
-  max-width: 39px;
-  max-height: 39px;
+  width: 39px;
+  height: 39px;
+  border: 1px solid #C6CBCD;
 }
-.team__sm-link:hover path, .team__sm-link rect {
+.team__sm-link:hover path {
   cursor: pointer;
   fill: #E71414;
-  stroke: #E71414;
+}
+.team__sm-link:hover {
+  border-color: #E71414;
 }
 .team__sm-link:active path {
   fill: #FF4343;
-  stroke: #FF4343;
+}
+.team__sm-link:active {
+  border-color: #FF4343;
 }
 .team__sm-icon {
-  width: 100%;
-  height: 100%;
+  pointer-events: none;
+}
+.team__sm-icon rect {
+  display: none;
 }/*# sourceMappingURL=style_team.css.map */
