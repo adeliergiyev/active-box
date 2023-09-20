@@ -1,0 +1,40 @@
+//Variable file
+@import 'style_var.scss';
+
+//Extend file
+@import 'style_ext.scss';
+
+//Mixin file
+@import 'style_mix.scss';
+
+//Styles of "Slider" block
+.slider{
+    // max-height: 490px;
+    @include padding-block($pb: 30px);
+    &__wrapper{
+        
+    }
+    &__slide{
+        @extend %flex-block;
+        background-color: $thirtyBlockBackfround;
+    }
+    &__img{
+        width: 49%;
+    }
+    &__title{
+        max-width: 471px;
+        margin: auto;
+        @include texts($color:#fff, $family:Cardo, $size:36px, $lHeight:49px);
+        font-style: italic;
+        text-transform: capitalize;
+    }
+    &__subtitle{
+        
+    }
+}
+.swiper-pagination-bullet-active{
+    background-color: #7E5D6F;
+}
+.swiper-pagination{
+
+}
