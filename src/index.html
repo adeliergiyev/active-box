@@ -5,17 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- Link to google fonts CSS  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Raleway:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Link to my own CSS files  -->
     <link rel="stylesheet" href="/src/style/style_res.css" />
     <link rel="stylesheet" href="/src/style/style_header-banner.css" />
     <link rel="stylesheet" href="/src/style/style_features.css" />
     <link rel="stylesheet" href="/src/style/style_projects.css" />
     <link rel="stylesheet" href="/src/style/style_team.css" />
+    <link rel="stylesheet" href="/src/style/style_slider.css" />
 
-    <title>ActiveBOX</title>
+    <!-- Title of page and link to favicon image  -->
+    <title>Active Box Layout</title>
+    <link rel="icon" type="image/x-icon" href="/src/media/favicon.png">
 </head>
 
 <body>
@@ -364,27 +373,51 @@
             </article>
         </div>
     </section>
+    <!-- Swiper -->
+    <section class="swiper slider">
+        <div class="swiper-wrapper slider__wrapper">
 
-    <section class="slider">
-        <div class="slider__container">
-            <div class="slider__item">
-                <img src="/src/media/slider/main_photo.jpeg" alt="Two momen" class="slider__img">
-            </div>
-            <div class="slider__item">
-                <p class="slider__description">
-                    “Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu
+            <div class="swiper-slide slider__slide">
+                <img src="/src/media/slider/main_photo.jpeg" alt="Team Communication" class="slider__img">
+
+                <h3 class="slider__title">
+                    “Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean
+                    eu
                     leo quam...”
-                </p>
-                <p class="slider__position">Susan Sims, Interaction Designer at XYZ</p>
+                </h3>
+
             </div>
+
+            <div class="swiper-slide slider__slide">
+                <img src="/src/media/slider/main_photo.jpeg" alt="Team Communication" class="slider__img">
+                <h3 class="slider__title">
+                    “Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean
+                    eu
+                    leo quam...”
+                </h3>
+
+            </div>
+
+            <div class="swiper-slide slider__slide">
+                <img src="/src/media/slider/main_photo.jpeg" alt="Team Communication" class="slider__img">
+                <h3 class="slider__title">
+                    “Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean
+                    eu
+                    leo quam...”
+                </h3>
+
+            </div>
+
+            <div class="swiper-slide slider__slide">
+                <img src="/src/media/slider/main_photo.jpeg" alt="Team Communication" class="slider__img">
+                <h3 class="slider__title">
+                    “Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean
+                    eu
+                    leo quam...”
+                </h3>
         </div>
-        <div class="slider__dots">
-            <div class="slider__dot"></div>
-            <div class="slider__dot"></div>
-            <div class="slider__dot"></div>
-            <div class="slider__dot"></div>
-            <div class="slider__dot"></div>
-        </div>
+
+        <div class="swiper-pagination"></div>
     </section>
 
     <section class="download">
@@ -435,6 +468,18 @@
             Made with by Kamal Chaneman</p>
     </div>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".slider", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
 </body>
 
 </html>

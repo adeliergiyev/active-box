@@ -1,0 +1,30 @@
+.slider__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  padding: 0px 0px 30px 0px;
+}
+.slider__slide {
+  background-color: #5C3249;
+}
+.slider__img {
+  width: 49%;
+}
+.slider__title {
+  max-width: 471px;
+  margin: auto;
+  color: #fff;
+  font-family: Cardo;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 49px;
+  font-style: italic;
+  text-transform: capitalize;
+}
+.swiper-pagination-bullet-active {
+  background-color: #7E5D6F;
+}/*# sourceMappingURL=style_slider.css.map */
