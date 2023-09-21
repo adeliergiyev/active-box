@@ -8,33 +8,68 @@
 @import 'style_mix.scss';
 
 //Styles of "Slider" block
-.slider{
-    // max-height: 490px;
-    @include padding-block($pb: 30px);
-    &__wrapper{
+.slider {
+    position: relative;
+    @include padding-block($pb: 48px);
+    margin-bottom: 100px;
+    &__slides {
+        max-height: 490px;
+    }
+
+    &__slide {
+        @extend %flex-block;
+        justify-content:space-between;
+        background-color: $thirtyBlockBackground;
+    }
+
+    &__image-wrapper {
+        max-width: 49%;
         
     }
-    &__slide{
-        @extend %flex-block;
-        background-color: $thirtyBlockBackfround;
+    
+    &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
-    &__img{
-        width: 49%;
-    }
-    &__title{
-        max-width: 471px;
+
+    &__text_wrapper {
         margin: auto;
-        @include texts($color:#fff, $family:Cardo, $size:36px, $lHeight:49px);
+    }
+    &__title {
+        max-width: 471px;
+        @include texts($color: #fff, $family: Cardo, $size: 36px, $lHeight: 49px);
         font-style: italic;
         text-transform: capitalize;
     }
-    &__subtitle{
+
+    &__subtitle {}
+
+    &__pagination-wrapper {
         
     }
 }
-.swiper-pagination-bullet-active{
-    background-color: #7E5D6F;
-}
-.swiper-pagination{
 
+.swiper {
+
+    &_wrapper {
+        max-height: 490px;
+    }
+    &-pagination{
+        
+    }
+    &-pagination-bullet {
+        width: 14px;
+        height: 14px;
+        margin-right: 25px;
+        background-color: $primaryTextColor;
+        border: 1px solid $forthBlcokBackground;
+    }
+    &-pagination-bullet-active {
+        background-color: $forthBlcokBackground;
+    }
+    &-horizontal>&-pagination-bullets{
+        bottom: 0px;
+    }
 }
