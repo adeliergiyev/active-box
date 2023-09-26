@@ -11,54 +11,50 @@
 .slider {
     position: relative;
     @include padding-block($pb: 48px);
-    margin-bottom: 100px;
     &__slides {
-        max-height: 490px;
     }
 
     &__slide {
         @extend %flex-block;
-        justify-content:space-between;
         background-color: $thirtyBlockBackground;
     }
 
     &__image-wrapper {
-        max-width: 49%;
-        
+        min-width: 49%;
+        height: 490px;
     }
-    
+
     &__img {
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
+        
     }
 
     &__text_wrapper {
-        margin: auto;
+        margin-left: 25px;
+        @extend %flex-block;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 auto;
+        padding: 25px;
     }
     &__title {
         max-width: 471px;
-        @include texts($color: #fff, $family: Cardo, $size: 36px, $lHeight: 49px);
+        @include texts($color: #fff, $family: Cardo, $size: 36px, $lHeight: 57.5px);
         font-style: italic;
         text-transform: capitalize;
     }
 
-    &__subtitle {}
-
-    &__pagination-wrapper {
-        
+    &__subtitle {
+        @include titles($t-align:start, $family:Raleway, $size:13px, $weight:700, $lHeight:28px);
+        width: 100%;
     }
 }
 
 .swiper {
 
-    &_wrapper {
-        max-height: 490px;
-    }
-    &-pagination{
-        
-    }
     &-pagination-bullet {
         width: 14px;
         height: 14px;
@@ -69,7 +65,10 @@
     &-pagination-bullet-active {
         background-color: $forthBlcokBackground;
     }
-    &-horizontal>&-pagination-bullets{
+    &-horizontal>&-pagination-bullets {
         bottom: 0px;
+    }
+    &-horizontal>&-pagination-bullets &-pagination-bullet{
+        margin-right: 25px;
     }
 }

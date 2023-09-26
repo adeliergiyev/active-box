@@ -1,0 +1,58 @@
+.download__container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.download {
+  padding: 114px 0px 114px 0px;
+}
+.download__container {
+  text-align: center;
+}
+.download__title {
+  text-align: center;
+  color: #000;
+  font-family: Raleway;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 70px;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+.download__subtitle {
+  text-align: center;
+  color: #000;
+  font-family: Raleway;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin-bottom: 48px;
+}
+.download__button {
+  background-color: rgb(255, 67, 67);
+  max-width: 370px;
+  width: 100%;
+  color: #FFF;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 28px;
+  text-transform: uppercase;
+  padding: 26px;
+  border: none;
+  transition: 0.25s linear;
+}
+.download__button:hover {
+  cursor: pointer;
+  background-color: #E71414;
+}
+.download__button:active {
+  background-color: #FF4343;
+  box-shadow: 4px 4px 30px 0px #FF4343;
+}/*# sourceMappingURL=style_download.css.map */
