@@ -1,0 +1,42 @@
+//Variable file
+@import 'style_var.scss';
+
+//Extend file
+@import 'style_ext.scss';
+
+//Mixin file
+@import 'style_mix.scss';
+
+//Styles of "Download" block
+.download {
+    @include padding-block($pt: 114px, $pb: 114px);
+
+    &__container {
+        @extend %container-size;
+        text-align: center;
+    }
+
+    &__title {
+        @include titles ($color: $thirtyTextColor, $size: 30px, $weight: 500, $lHeight: 70px, $transform: capitalize);
+        margin-bottom: 5px;
+    }
+
+    &__subtitle {
+        @include titles ($color: $thirtyTextColor, $size: 18px, $weight: 700, $lHeight: 21px, $transform: uppercase);
+        margin-bottom: 48px;
+    }
+
+    &__button {
+        @include download-button;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $hoverColorButton;
+        }
+
+        &:active {
+            background-color: $activeColorButton;
+            box-shadow: 4px 4px 30px 0px $activeColorButton;
+        }
+    }
+}
