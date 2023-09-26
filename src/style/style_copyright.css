@@ -1,0 +1,20 @@
+.copyright {
+  padding: 24px 0px 24px 0px;
+  background-color: #2C3154;
+  text-align: center;
+}
+.copyright__text {
+  text-align: center;
+  color: #808080;
+  font-family: Raleway;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: capitalize;
+  max-width: 370px;
+  display: inline-block;
+}
+.copyright__text span {
+  color: #fff;
+}/*# sourceMappingURL=style_copyright.css.map */

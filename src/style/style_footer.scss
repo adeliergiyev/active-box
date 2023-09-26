@@ -1,0 +1,77 @@
+//Variable file
+@import 'style_var.scss';
+
+//Extend file
+@import 'style_ext.scss';
+
+//Mixin file
+@import 'style_mix.scss';
+
+//Styles of "Footer" block
+.footer{
+    @include padding-block($pt: 71px, $pb: 71px);
+    background-color: $fifthBlockBackground;
+    &__container{
+        @extend %container-size;
+        @extend %flex-block;
+        align-items: flex-start;
+        column-gap: 30px;
+    }
+    &__wrap{
+        text-align: center;
+        width: calc((100% - 60px)/2);
+        &:nth-child(2) .footer__title{
+            margin-bottom: 49px;
+        }
+    }
+    &__title{
+        @include titles($color:$primaryTextColor, $size:18px, $weight:700, $lHeight:21px);
+        margin-bottom: 29px;
+    }
+    &__text{
+        @include titles($color:$primaryTextColor, $size:18px, $weight:400, $lHeight:21px, $transform:capitalize);
+    }
+
+    &__sm-items{
+        @extend %flex-block;
+        column-gap: 6px;
+        width: 100%;
+    }
+
+    &__sm-item{
+        display: block;
+        width: 39px;
+        height: 39px;
+        border: 1px solid #C6CBCD;
+        @extend %animation;
+
+        & path {
+            @extend %animation;
+        }
+    
+        &:hover path {
+            cursor: pointer;
+            fill: $hoverColorButton;
+        }
+    
+        &:hover {
+            border-color: $hoverColorButton;
+        }
+    
+        &:active path {
+            fill: $activeColorButton;
+        }
+    
+        &:active {
+            border-color: $activeColorButton;
+        }
+    }
+
+    &__sm-icon{
+        pointer-events: none;
+    
+        & rect {
+            display: none;
+        }
+    }
+}

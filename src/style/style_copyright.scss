@@ -1,0 +1,23 @@
+//Variable file
+@import 'style_var.scss';
+
+//Extend file
+@import 'style_ext.scss';
+
+//Mixin file
+@import 'style_mix.scss';
+
+//Styles of "Copyright" block
+.copyright{
+    @include padding-block($pt: 24px, $pb: 24px);
+    background-color: $sixthBlockBackground;
+    text-align: center;
+    &__text{    
+        @include titles($color:#808080, $size:18px, $weight:400, $lHeight:21px, $transform:capitalize);
+        max-width: 370px;
+        display: inline-block;
+    }
+    &__text span{
+        color: $primaryTextColor;
+    }
+}
